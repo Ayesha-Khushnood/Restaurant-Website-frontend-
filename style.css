@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Lato&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Baloo+Bhaina+2:wght@400..800&family=Lato&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+
+
+:root {
+    --main-bg-color: black;
+    --main-bg-color2: #6f1107;
+    --font1: 'Robot', sans-serif, cursive;
+    --font2: 'Baloo Bhaina', sans-serif;
+    --font3: "Italianno", cursive;
+    ;
+    --font4: "Playwrite CU", cursive;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: black;
+    color: #ecf0f1;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 150px;
+    margin: 20px 0;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+}
+
+
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 20px;
+    background-color: #fff;
+
+}
+
+/* Banner Section */
+.banner {
+    background-image: url('../img/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 536px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+}
+
+.banner-overlay {
+
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.banner-overlay h1 {
+    font-size: 95px;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+    font-family: var(--font3);
+}
+
+/* About Us Section */
+.about {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    animation: slideIn 4s ease-in-out;
+}
+
+.about-content img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content p {
+    max-width: 500px;
+    color: #7f8c8d;
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 25px;
+    background-color: var(--main-bg-color2);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #c0392b;
+}
+
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 70%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 12px 30px;
+    background-color: var(--main-bg-color2);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #c0392b;
+}
+
+.contact-info {
+    margin-top: 20px;
+    color: #7f8c8d;
+}
+
+/* Signup Section */
+/* .signup {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.signup h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form input,
+.signup-form textarea,
+.signup-form .gender,
+.signup-form button {
+    width: 70%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+.signup-form button {
+    background-color: #27ae60;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: #229954;
+} */
+
+/* Footer Section */
+.footer {
+    background-color: var(--main-bg-color);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.footer .social-media a {
+    margin: 0 10px;
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .social-media a:hover {
+    color: #e74c3c;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
